@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <title>API INFORMATION APP</title>
+
+    <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Return of JSON information for various API's">
+	<meta name="author" content="James Brierley">
+
+    <link href = "favicon-16x16.png" rel="icon">
+    <link href = "vendors/bootstrap-4.5.3-dist/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link rel ="stylesheet" type = "text/css" href="./css/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>API Name</th>
+                <th>API Description</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1. Earthquake</td>
+                <td>Returns a list of earthquakes, ordered by magnitude</td>
+                <td><button type= "submit" class = "submit-button" id="submit1">Submit</button></td>
+            </tr>
+            <tr>
+                <td>2. Weather Stations with most recent Weather Observation</td>
+                <td>Returns a list of weather stations with the most recent weather observation</td>
+                <td><button type= "submit" class = "submit-button" id="submit2">Submit</button></td>
+            </tr>
+            <tr>
+                <td>3. Postal Code Search</td>
+                <td>Returns a list of postalcodes and places for the lat/lng query as xml document. The result is sorted by distance. For Canada the FSA is returned (first 3 characters of full postal code)</td>
+                <td><button type= "submit" class = "submit-button" id="submit3">Submit</button></td>
+            </tr>
+            <tr>
+                <td colspan = "3" id ="results" style= "font-weight: bold; text-decoration: underline;">Results</td>
+            </tr>
+            <tr>
+                <td  style = "font-weight: bold;" colspan ="3">
+                    Earthquakes
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Date and time of earthquake:
+                </td>
+                <td colspan ="2" id = "datetime">
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Depth:
+                </td>
+                <td colspan ="2" id = "depth">
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Magnitude:
+                </td>
+                <td colspan ="2" id = "magnitude">
+
+                </td>
+            </tr>
+            <tr>
+                <td style = "font-weight: bold;" colspan ="3">
+                    Weather Stations
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Temperature:
+                </td>
+                <td colspan ="2" id = "temperature">
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Humidity:
+                </td>
+                <td colspan ="2" id = "humidity">
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Station name:
+                </td>
+                <td colspan ="2" id = "stationName">
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Wind Speed:
+                </td>
+                <td colspan ="2" id = "windSpeed">
+
+                </td>
+            </tr>
+            <tr>
+                <td style = "font-weight: bold;" colspan = "3">
+                    Postal Code
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Admin Code:
+                </td>
+                <td colspan ="2" id = "adminCode1">
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Country Code:
+                </td>
+                <td colspan ="2" id = "countryCode">
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Postal Code:
+                </td>
+                <td colspan ="2" id = "postalCode">
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Place Name:
+                </td>
+                <td colspan ="2" id = "placeName">
+
+                </td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+    <div id = "wrap"></div>
+    <div id = "preloader"></div>
+
+    <script src ="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="application/javascript" src ="js/jquery.js"></script>
+    <script type="application/javascript" src="js/script.js"></script>
+</body>
+
+</html>
